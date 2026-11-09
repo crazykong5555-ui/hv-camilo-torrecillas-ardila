@@ -10,234 +10,6 @@ export default function HojaDeVida() {
         <title>Hoja de Vida - Camilo Torrecillas Ardila</title>
         <meta name="description" content="Hoja de vida profesional de Camilo Torrecillas Ardila: Tecnólogo en Electrónica Industrial y Desarrollo de Software" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <style jsx>{`
-          :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2c5282;
-            --accent-color: #4299e1;
-            --background-color: #f7fafc;
-            --text-color: #2d3748;
-            --light-text: #718096;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          }
-
-          * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-          }
-
-          body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-          }
-
-          .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-          }
-
-          .header {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e2e8f0;
-          }
-
-          .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--secondary-color);
-          }
-
-          .info-text {
-            flex: 1;
-            min-width: 250px;
-          }
-
-          .info-text h1 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-          }
-
-          .info-text .title {
-            font-size: 1.1rem;
-            color: var(--light-text);
-            font-weight: 500;
-            margin-bottom: 1rem;
-          }
-
-          .info-text p {
-            color: var(--light-text);
-            line-height: 1.8;
-          }
-
-          .section {
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-          }
-
-          .section h2 {
-            color: var(--primary-color);
-            border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-          }
-
-          .section h2::before {
-            content: "";
-            width: 4px;
-            height: 24px;
-            background-color: var(--accent-color);
-          }
-
-          .experience-item, .education-item, .certification-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
-          }
-
-          .experience-item:last-child, .education-item:last-child, .certification-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-          }
-
-          .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.5rem;
-          }
-
-          .item-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--primary-color);
-          }
-
-          .item-subtitle {
-            color: var(--light-text);
-            font-size: 0.9rem;
-          }
-
-          .item-date {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.85rem;
-          }
-
-          .item-description {
-            color: var(--text-color);
-            font-size: 0.95rem;
-            line-height: 1.7;
-          }
-
-          .education-img {
-            width: 50px;
-            height: 50px;
-            margin-right: 1rem;
-            border-radius: var(--border-radius);
-            object-fit: cover;
-            border: 2px solid var(--accent-color);
-          }
-
-          .education-content {
-            display: flex;
-            align-items: flex-start;
-          }
-
-          .education-details {
-            flex: 1;
-          }
-
-          .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1rem;
-          }
-
-          .skill-tag {
-            background: #edf2f7;
-            color: var(--text-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 500;
-          }
-
-          .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-          }
-
-          .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem;
-            background: #ebf8ff;
-            border-radius: var(--border-radius);
-          }
-
-          .contact-item svg {
-            width: 24px;
-            height: 24px;
-            color: var(--accent-color);
-          }
-
-          .contact-item p {
-            margin: 0;
-            color: var(--text-color);
-          }
-
-          .contact-item a {
-            color: var(--text-color);
-            text-decoration: none;
-            word-break: break-all;
-          }
-
-          .contact-item a:hover {
-            text-decoration: underline;
-          }
-
-          @media (max-width: 768px) {
-            .header {
-              flex-direction: column;
-              text-align: center;
-            }
-            .info-text {
-              text-align: center;
-            }
-            .education-content {
-              flex-direction: column;
-              align-items: center;
-              text-align: center;
-            }
-            .education-img {
-              margin: 0 0 1rem 0;
-            }
-          }
-        `}</style>
       </Head>
 
       <main>
@@ -266,48 +38,6 @@ export default function HojaDeVida() {
           <section className="section">
             <h2>Experiencia Laboral</h2>
             
-            <div className="experience-item">
-              <div className="item-header">
-                <div>
-                  <div className="item-title">Técnico de Mantenimiento de Equipos Electrónicos</div>
-                  <div className="item-subtitle">RECURSOS HUMANOS TEMPORALES LTDA</div>
-                </div>
-                <div className="item-date">Dic 2015 - Actual</div>
-              </div>
-              <p className="item-description">
-                Experiencia acumulada de 123.87 meses en mantenimiento preventivo y correctivo de equipos electrónicos, 
-                diagnóstico de fallas y soporte técnico especializado para clientes corporativos.
-              </p>
-            </div>
-            
-            <div className="experience-item">
-              <div className="item-header">
-                <div>
-                  <div className="item-title">Técnico de Mantenimiento de Equipos Electrónicos</div>
-                  <div className="item-subtitle">DEVELOPER AND INTEGRATOR SAS</div>
-                </div>
-                <div className="item-date">Feb 2016 - Actual</div>
-              </div>
-              <p className="item-description">
-                121.03 meses de experiencia en instalaciones eléctricas de alta tensión, mantenimiento de sistemas de potencia 
-                y solución técnica integrada para infraestructuras críticas.
-              </p>
-            </div>
-
-            <div className="experience-item">
-              <div className="item-header">
-                <div>
-                  <div className="item-title">Técnico de Soporte Técnico Nivel 2</div>
-                  <div className="item-subtitle">COMWARE - SECRETARÍA DE EDUCACIÓN (SED)</div>
-                </div>
-                <div className="item-date">Nov 2011 - Dic 2012</div>
-              </div>
-              <p className="item-description">
-                Gestión de mesa de ayuda para instituciones educativas, resolución de incidencias en equipos de cómputo 
-                y redes, y capacitación de usuarios finales en herramientas tecnológicas.
-              </p>
-            </div>
-
             <div className="experience-item">
               <div className="item-header">
                 <div>
@@ -381,12 +111,12 @@ export default function HojaDeVida() {
 
           {/* Educación y Certificaciones */}
           <section className="section">
-            <h2>Formación Académica y Certificaciones</h2>
+            <h2>Formación Académica</h2>
             
             <div className="education-item">
               <div className="education-content">
                 <Image
-                  src="/icfes-logo.jpg"
+                  src="/logo-icfes.jpg"
                   alt="Logo ICFES"
                   width={50}
                   height={50}
@@ -451,40 +181,14 @@ export default function HojaDeVida() {
             </div>
           </div>
 
-          <div className="education-item">
-            <div className="education-details">
-              <h3 style={{ color: 'var(--primary-color)', marginBottom: '1rem' }}>Certificaciones SENA</h3>
-              <div className="skills-list">
-                <span className="skill-tag" style={{ background: 'var(--background-color)', color: 'var(--text-color)' }}>
-                  Diseño de Páginas Web (HTML, JS, PHP) - En curso (2026)
-                </span>
-                <span className="skill-tag">Adobe Flash Professional CS5.5 (40 hrs) - 2015</span>
-                <span className="skill-tag">Desarrollo de Mentalidad Emprendedora (70 hrs) - 2005</span>
-                <span className="skill-tag">Relaciones Interpersonales (1 bimestre) - 1988</span>
-                <span className="skill-tag">Programación C++ Nivel III (40 hrs) - 2023</span>
-                <span className="skill-tag">Python: Variables y Estructuras de Control (48 hrs) - 2023</span>
-                <span className="skill-tag">Programación C++ Nivel II (40 hrs) - 2022</span>
-                <span className="skill-tag">Java: Manejo de Archivos y Excepciones (40 hrs) - 2014</span>
-                <span className="skill-tag">Java: Multithreading y Procesos (40 hrs) - 2014</span>
-                <span className="skill-tag">Java: Manejo de Datos en Memoria (40 hrs) - 2014</span>
-                <span className="skill-tag">Java: GUI, Eventos, Clases y Objetos (40 hrs) - 2014</span>
-                <span className="skill-tag">Java: Programación Orientada a Objetos (40 hrs) - 2011</span>
-                <span className="skill-tag">Soporte Técnico para Computadores (60 hrs) - 2011</span>
-                <span className="skill-tag">Desarrollo Web con HTML y JavaScript (40 hrs) - 2010</span>
-                <span className="skill-tag">Programación C++ Nivel I (40 hrs) - 2008</span>
-                <span className="skill-tag">Programador BASIC - Sistemas Ltda. (1 año) - 1985</span>
-              </div>
-            </div>
-          </div>
+          
         </section>
 
-        {/* Habilidades Técnicas */}
-        <section className="section">
+        {/* Información de Contacto */}
+                <section className="section">
           <h2>Habilidades Técnicas</h2>
           <div className="skills-list">
-            <span className="skill-tag" style={{ background: '#edf2f7', color: 'var(--text-color)' }}>
-              Instalación y mantenimiento de UPS
-            </span>
+            <span className="skill-tag">Instalación y mantenimiento de UPS</span>
             <span className="skill-tag">Instalaciones eléctricas (baja tensión)</span>
             <span className="skill-tag">Cableado estructurado y redes</span>
             <span className="skill-tag">Soporte técnico (Help Desk)</span>
@@ -497,9 +201,7 @@ export default function HojaDeVida() {
             <span className="skill-tag">Pruebas de software y documentación técnica</span>
           </div>
         </section>
-
-        {/* Información de Contacto */}
-        <section className="section">
+<section className="section">
           <h2>Información de Contacto</h2>
           <div className="contact-info">
             <div className="contact-item">
@@ -516,14 +218,6 @@ export default function HojaDeVida() {
               </svg>
               <div>
                 <strong>Teléfono:</strong> <a href="tel:+573184800108">+57 318 480 0108</a>
-              </div>
-            </div>
-            <div className="contact-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18M3 18h18" />
-              </svg>
-              <div>
-                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/camilo-torrecillas" target="_blank" rel="noopener noreferrer">linkedin.com/in/camilo-torrecillas</a>
               </div>
             </div>
             <div className="contact-item">
